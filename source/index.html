@@ -14,47 +14,48 @@
    </div>
 
   <header class="header page__header">
-    <div class="header__top-container">
-      <div class="logo header__logo">
-        <svg class="logo__icon logo__icon--desktop" width="52" height="52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина Smart-Device">
-          <use xlink:href="#icon-logo-desktop" aria-hidden="true"></use>
-        </svg>
-        <svg class="logo__icon logo__icon--mobile" width="38" height="38" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина Smart-Device">
-          <use xlink:href="#icon-logo-mobile" aria-hidden="true"></use>
-        </svg>
-        <div class="logo__company-name-container">
-          <p class="logo__company-name">Smart Device</p>
-          <p class="logo__company-slogan">умные технологии</p>
+    <div class="container">
+      <div class="header__top-container">
+        <div class="logo header__logo">
+          <a class="logo__link" href="#">
+            <svg class="logo__icon logo__icon--desktop" width="52" height="52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина Smart-Device">
+              <use xlink:href="#icon-logo-desktop" aria-hidden="true"></use>
+            </svg>
+            <svg class="logo__icon logo__icon--mobile" width="38" height="38" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина Smart-Device">
+              <use xlink:href="#icon-logo-mobile" aria-hidden="true"></use>
+            </svg>
+          </a>>
+          <div class="logo__company-name-container">
+            <p class="logo__company-name">Smart Device</p>
+            <p class="logo__company-slogan">умные технологии</p>
+          </div>
+        </div>
+        <div class="header__user-container">
+          <a class="header__user-link header__user-link--mail" href="mailto:info@sd.ru">
+            <svg class="header__user-icon header__user-icon--mail header__user-icon--desktop" width="19" height="14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Почта Smart-Device">
+              <use xlink:href="#icon-mail-desktop" aria-hidden="true"></use>
+            </svg>
+            <svg class="header__user-icon header__user-icon--mail header__user-icon--mail header__user-icon--tablet" width="25" height="19" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Почта Smart-Device">
+              <use xlink:href="#icon-mail-tablet" aria-hidden="true"></use>
+            </svg>
+            <p class="header__user-text">info@sd.ru</p>
+          </a>
+          <a class="header__user-link header__user-link--tel" href="tel:+7(495)0005252">
+            <svg class="header__user-icon header__user-icon--tel header__user-icon--desktop" width="18" height="18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон Smart-Device">
+              <use xlink:href="#icon-tel-desktop" aria-hidden="true"></use>
+            </svg>
+            <svg class="header__user-icon header__user-icon--tel header__user-icon--tablet" width="24" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон Smart-Device">
+              <use xlink:href="#icon-tel-tablet" aria-hidden="true"></use>
+            </svg>
+            <p class="header__user-text">+7 (495) 000 52 52</p>
+          </a>
+          <button class="button header__user-button" type="button">Заказать звонок</button>
         </div>
       </div>
-      <div class="header__user-container">
-        <a class="header__user-link header__user-link--mail" href="mailto:info@sd.ru">
-          <svg class="header__user-icon header__user-icon--mail header__user-icon--desktop" width="19" height="14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Почта Smart-Device">
-            <use xlink:href="#icon-mail-desktop" aria-hidden="true"></use>
-          </svg>
-          <svg class="header__user-icon header__user-icon--mail header__user-icon--mail header__user-icon--tablet" width="25" height="19" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Почта Smart-Device">
-            <use xlink:href="#icon-mail-tablet" aria-hidden="true"></use>
-          </svg>
-          <p class="header__user-text">info@sd.ru</p>
-        </a>
-        <a class="header__user-link header__user-link--tel" href="tel:+7(495)0005252">
-          <svg class="header__user-icon header__user-icon--tel header__user-icon--desktop" width="18" height="18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон Smart-Device">
-            <use xlink:href="#icon-tel-desktop" aria-hidden="true"></use>
-          </svg>
-          <svg class="header__user-icon header__user-icon--tel header__user-icon--tablet" width="24" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон Smart-Device">
-            <use xlink:href="#icon-tel-tablet" aria-hidden="true"></use>
-          </svg>
-          <p class="header__user-text">+7 (495) 000 52 52</p>
-        </a>
-        <button class="header__user-button" type="button">Заказать звонок</button>
-      </div>
-    </div>
-    <div class="header__bottom-container">
-      <h1 class="header__main-heading">печатные платы</h1>
-      <p class="header__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="header__button" type="button"><span class="header__button-text header__button-text--desktop">получить бесплатную консультацию</span><span class="header__button-text header__button-text--mobile">бесплатная консультация</span></span></button>
-      <div class="header__image-container">
-        <img src="img/printboard@1x.png" srcset="img/printboard@1x.png 1x, img/printboard@2x.png 2x" alt="Печатная плата">
+      <div class="header__bottom-container">
+        <h1 class="header__main-heading">печатные платы</h1>
+        <p class="header__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class=" button header__button" type="button"><span class="header__button-text header__button-text--desktop">получить бесплатную консультацию</span><span class="header__button-text header__button-text--mobile">бесплатная консультация</span></span></button>
       </div>
     </div>
   </header>

@@ -4,27 +4,3 @@
 
   list-style: none;
 }
-
-@mixin h2Settings {
-  
-}
-
-@mixin buttonReset {
-  background-color: transparent;
-  border: 1px solid #FFFFFF;
-  border-radius: 5px;
-
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  color: #FFFFFF;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-align: center;
-
-  width: 180px;
-
-  box-sizing: border-box;
-}
