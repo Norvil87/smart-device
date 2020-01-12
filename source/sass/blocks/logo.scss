@@ -15,6 +15,12 @@
     padding-top: 8px;
 }
 
+.logo__company-name--footer {
+    color: #203C42;
+
+    padding-top: 5px;
+}
+
 .logo__company-slogan {
     width: 134px;
 
@@ -43,10 +49,18 @@
     opacity: 0.3;
 }
 
+@media (max-width: $desktop-res) {
+    .logo__icon {
+        margin-right: 8px;
+    }
+}
+
 @media (max-width: $tablet-res) {
     .logo__icon--desktop {
         display: none;
     }
+
+    
 
     .logo__icon--mobile {
         display: block;

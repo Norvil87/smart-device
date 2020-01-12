@@ -1,0 +1,15 @@
+.content__features {
+    margin-bottom: 75px;
+}
+
+@media (max-width: $desktop-res) {
+    .content__features {
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: $tablet-res) {
+    .content__features {
+        margin-bottom: 35px;
+    }
+}

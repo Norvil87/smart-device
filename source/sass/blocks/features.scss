@@ -1,0 +1,125 @@
+.features__list {
+    @include listReset;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.features__title {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+
+    color: #00B2FF;
+
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.features__text {
+    line-height: 22px;
+
+    color: #666666;
+
+    margin: 0;
+    padding: 0;
+}
+
+.features__item {
+    width: 48.7%;
+    min-height: 299px;
+
+    border: 1px solid #EBEBEB;
+    border-left: 3px solid #00B2FF;
+
+    padding-top: 38px;
+    padding-left: 45px;
+
+    margin-bottom: 30px;
+    margin-right: 2.6%;
+
+    position: relative;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }  
+}
+
+.features__icon  {
+    margin-bottom: 15px;
+
+    fill: $skyBlue;
+}
+
+.features__item:hover {
+    background-color: $skyBlue;
+}
+
+.features__item:hover .features__text,
+.features__item:hover .features__title {
+    color: #fff;
+}
+
+.features__item:hover .features__icon {
+    fill: #fff;
+}
+
+@media (max-width: $desktop-res) {
+    .features__icon  {
+        margin-bottom: 5px;
+    }
+
+    .features__item {
+        width: 48%;
+        min-height: 306px;
+
+        margin-right: 4%;
+        padding-top: 25px;
+        padding-left: 23px;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        } 
+    }
+
+    .features__item--3,
+    .features__item--4 {
+        min-height: 232px;
+    }
+
+    .features__list {
+        width: 95.5%;
+    }
+
+    .features__title {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: $tablet-res) {
+    .features__title {
+        line-height: 140.62%;
+        font-size: 20px;
+    }
+
+    .features__item {
+        width: 100%;
+        min-height: 310px;
+
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+
+    .features__item--3,
+    .features__item--4 {
+        min-height: 244px;
+    }
+}

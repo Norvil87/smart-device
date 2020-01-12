@@ -1,0 +1,15 @@
+.page__header {
+    margin-bottom: 110px;
+}
+
+@media (max-width: $desktop-res) {
+    .page__header {
+        margin-bottom: 160px;
+    }
+}
+
+@media (max-width: $tablet-res) {
+    .page__header {
+        margin-bottom: 60px;
+    }
+}

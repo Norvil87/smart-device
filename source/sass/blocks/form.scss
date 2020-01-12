@@ -1,0 +1,264 @@
+.form {
+    padding-top: 96px;
+    
+
+    background-color: $skyBlue;
+}
+
+.form__background-container {
+    background-image: url("../img/background-form.png");
+    background-position: -21px -154px;
+    background-repeat: no-repeat;
+}
+
+.form button {
+    min-width: 270px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    margin-bottom: 113px;
+}
+
+.form input,
+.form textarea {
+    background-color: #19baff;
+    border: none;
+
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 17px;
+
+    width: 100%;
+}
+
+.form input:hover,
+.form textarea:hover,
+.form input[type="checkbox"]:hover + label {
+    opacity: 0.6;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form input[type="checkbox"]:active + label {
+    opacity: 0.3;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;   
+}
+
+.form label {
+    display: block;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+
+    padding-left: 40px;
+    margin-top: 2px;
+
+    position: relative;
+}
+
+.form input[type="checkbox"] {
+    display: none;
+}
+
+.form input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid #fff;
+}
+
+.form input[type="checkbox"]:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 2L3.5 5L8 0.5' stroke='white'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form__centrifier {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.form__content-container {
+    width: 48.7%;
+    margin-left: auto;
+}
+
+.form__input-container--text,
+.form__input-container--tel {
+    width: 47.4%;
+
+    margin-bottom: 40px;
+}
+
+.form__input-container--checkbox {
+    width: 47.4%;
+}
+
+.form__input-container--text {
+    margin-right: auto;
+} 
+
+.form__inputs-container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.form__header {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+
+    color: #FFFFFF;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7px;
+}
+
+.form__text {
+    line-height: 22px;
+    color: #FFFFFF;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.form textarea {
+    width: 100%;
+    min-height: 154px;
+}
+
+.form__textarea-container {
+    margin-bottom: 40px;
+
+    width: 100%;
+}
+
+
+@media (max-width: $desktop-res) { 
+    .form {
+        padding-top: 80px;
+        padding-bottom: 104px;
+    }
+
+    .form button {
+        min-width: 280px;
+    }
+
+    .form label {
+        font-size: 14px;
+        line-height: 16px;
+
+        padding-left: 45px;
+        margin-top: 8px;
+    }
+
+    .form__background-container {
+        background: none;
+    }
+
+    .form__content-container {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .form__input-container--text,
+    .form__input-container--tel {
+        margin-bottom: 43px;
+    }
+
+    .form__header {
+        font-size: 32px;
+        line-height: 140.62%;
+
+        margin-bottom: 15px;
+    } 
+
+    .form__text {
+        margin-bottom: 55px;
+    }
+
+    .form textarea {
+        padding-top: 12px;
+        min-height: 160px;
+    }
+} 
+
+@media (max-width: $tablet-res) {
+    .form {
+        padding-top: 30px;
+        padding-bottom: 44px;
+    }
+
+    .form button {
+        min-width: 100%;
+
+        margin-bottom: 25px;
+    }
+
+    .form__input-container--checkbox {
+        width: 100%;
+    }
+
+    .form input[type="checkbox"] + label::before {
+        left: 2px;
+    }
+
+    .form label {
+        margin-top: 0;
+        padding-left: 35px;
+        padding-top: 5px;
+    }
+
+    .form__content-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .form__header {
+        font-size: 28px;
+
+        margin-bottom: 10px;
+    }
+
+    .form__input-container--text,
+    .form__input-container--tel {
+        width: 100%;
+
+        margin-bottom: 33px;
+    }
+
+    .form__text {
+        line-height: 22px;
+    
+        margin-bottom: 28px;
+    }
+
+    .form textarea {
+        min-height: 104px;
+    }
+
+    .form__textarea-container {
+        margin-bottom: 23px;
+    }
+}
