@@ -227,7 +227,7 @@
       <div class="footer__container-top">
         <div class="footer__wrapper-top">
           <div class="logo footer__logo">
-            <a class="logo__link" href="#">
+            <a class="logo__link logo__link--footer" href="#">
               <svg class="logo__icon logo__icon--desktop" width="52" height="52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина Smart-Device">
                 <use xlink:href="#icon-logo-desktop" aria-hidden="true"></use>
               </svg>
@@ -236,7 +236,7 @@
               </svg>
             </a>
             <div class="logo__company-name-container">
-              <p class="logo__company-name logo__company-name--footer">Smart Device</p>
+              <p class="logo__company-name logo__company-name--footer">Service Device</p>
               <p class="logo__company-slogan">умные технологии</p>
             </div>
           </div>
@@ -256,13 +256,13 @@
         <div class="footer__nav">
           <h3 class="footer__nav-header">Разделы сайта</h3>
           <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">О компании</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Комплектующие</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Продукты</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Доставка</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Производство печатных плат</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="#">Монтаж печатных плат</a></li>
+            <li class="footer__nav-item footer__nav-item--1"><a class="footer__nav-link" href="#">О компании</a></li>
+            <li class="footer__nav-item footer__nav-item--2"><a class="footer__nav-link" href="#">Комплектующие</a></li>
+            <li class="footer__nav-item footer__nav-item--3"><a class="footer__nav-link" href="#">Продукты</a></li>
+            <li class="footer__nav-item footer__nav-item--4"><a class="footer__nav-link" href="#">Доставка</a></li>
+            <li class="footer__nav-item footer__nav-item--5"><a class="footer__nav-link" href="#">Производство печатных плат</a></li>
+            <li class="footer__nav-item footer__nav-item--6"><a class="footer__nav-link" href="#">Контакты</a></li>
+            <li class="footer__nav-item footer__nav-item--7"><a class="footer__nav-link" href="#">Монтаж печатных плат</a></li>
           </ul>
         </div>
         <div class="footer__contacts">
@@ -287,5 +287,34 @@
       </div>
     </div>
   </footer>
+
+  <div class="underlay" hidden="">
+  <section class="modal">
+    
+    <h2 class="modal__header form__header">Закажите звонок</h2>
+    <p class="modal__text form__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form class="form__inputs-container modal__inputs-container" action="#" method="post" enctype="multipart/form-data">
+      <div class="form__input-container form__input-container--text modal__input-container">
+        <input id="name" type="text" name="name" placeholder="Имя">
+        <label class="visually-hidden form__label" for="name"></label>
+      </div>
+      <div class="form__input-container form__input-container--tel modal__input-container">
+        <input id="tel" type="tel" name="tel" placeholder="Телефон">
+        <label class="visually-hidden form__label" for="tel"></label>
+      </div>
+      <div class="form__textarea-container modal__textarea-container">
+        <textarea id="text" placeholder="Ваш вопрос"></textarea>
+        <label class="visually-hidden form__label" for="text"></label>
+      </div>
+      <button class="button form__button modal__button modal__button--submit" type="submit">отправить</button>
+      <button class="button modal__button modal__button--close" type="button">закрыть</button>
+      <div class="form__input-container form__input-container--checkbox modal__input-container">
+        <input id="modal-checkbox" type="checkbox" name="checkbox" checked="">
+        <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
+  
+  </section>
+</div>
 </body>
 </html>

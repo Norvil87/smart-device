@@ -19,6 +19,8 @@
     color: #203C42;
 
     padding-top: 5px;
+
+    width: auto;
 }
 
 .logo__company-slogan {
@@ -53,14 +55,16 @@
     .logo__icon {
         margin-right: 8px;
     }
+
+    .logo__link--footer {
+        margin-right: 10px;
+    }
 }
 
 @media (max-width: $tablet-res) {
     .logo__icon--desktop {
         display: none;
     }
-
-    
 
     .logo__icon--mobile {
         display: block;

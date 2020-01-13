@@ -1,7 +1,6 @@
 .form {
     padding-top: 96px;
     
-
     background-color: $skyBlue;
 }
 
@@ -103,7 +102,7 @@
 }
 
 .form__input-container--checkbox {
-    width: 47.4%;
+    width: 44%;
 }
 
 .form__input-container--text {
@@ -144,6 +143,8 @@
 .form textarea {
     width: 100%;
     min-height: 154px;
+
+    resize: none;
 }
 
 .form__textarea-container {
@@ -161,6 +162,8 @@
 
     .form button {
         min-width: 280px;
+
+        margin-bottom: 0;
     }
 
     .form label {
