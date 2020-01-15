@@ -29,6 +29,7 @@
 
     margin: 0;
     padding: 0;
+    padding-right: 25px;
 }
 
 .features__item {
@@ -38,13 +39,15 @@
     border: 1px solid #EBEBEB;
     border-left: 3px solid #00B2FF;
 
-    padding-top: 38px;
+    padding-top: 40px;
     padding-left: 45px;
 
     margin-bottom: 30px;
     margin-right: 2.6%;
 
     position: relative;
+
+    background-color: #fff;
 
     &:nth-child(2n) {
         margin-right: 0;
@@ -98,14 +101,22 @@
     }
 
     .features__title {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
 
 @media (max-width: $tablet-res) {
+    .features__list {
+        width: 98%;
+    }
+
     .features__title {
         line-height: 140.62%;
         font-size: 20px;
+    }
+
+    .features__text {
+        padding-right: 0;
     }
 
     .features__item {

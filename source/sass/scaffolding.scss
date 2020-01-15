@@ -10,6 +10,15 @@ body {
   box-sizing: border-box;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.body .content {
+  flex-grow: 1;
+}
+
 *, *::before, *::after { box-sizing: inherit; }
 
 a {

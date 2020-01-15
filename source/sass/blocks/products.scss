@@ -16,21 +16,24 @@
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
     
-    &:last-child {
+    &:nth-child(3n) {
         margin-right: 0;
     }
 }
 
 .products__item--1 {
     background-image: url('../img/background-product1-desktop.png');
+    background-image: -webkit-image-set(url('../img/background-product1-desktop.webp'));
 }
 
 .products__item--2 {
     background-image: url('../img/background-product2-desktop.png');
+    background-image: -webkit-image-set(url('../img/background-product2-desktop.webp'));
 }
 
 .products__item--3 {
     background-image: url('../img/background-product3-desktop.png');
+    background-image: -webkit-image-set(url('../img/background-product3-desktop.webp'));
 }
 
 .products__item::after {
@@ -124,14 +127,17 @@
 
     .products__item--1 {
         background-image: url('../img/background-product1-tablet.png');
+        background-image: -webkit-image-set(url('../img/background-product1-tablet.webp'));
     }
     
     .products__item--2 {
         background-image: url('../img/background-product2-tablet.png');
+        background-image: -webkit-image-set(url('../img/background-product2-tablet.webp'));
     }
     
     .products__item--3 {
         background-image: url('../img/background-product3-tablet.png');
+        background-image: -webkit-image-set(url('../img/background-product3-tablet.webp'));
     }
 
     .products__header {
@@ -160,14 +166,17 @@
 
     .products__item--1 {
         background-image: url('../img/background-product1-mobile.png');
+        background-image: -webkit-image-set(url('../img/background-product1-mobile.webp'));
     }
     
     .products__item--2 {
         background-image: url('../img/background-product2-mobile.png');
+        background-image: -webkit-image-set(url('../img/background-product2-mobile.webp'));
     }
     
     .products__item--3 {
         background-image: url('../img/background-product3-mobile.png');
+        background-image: -webkit-image-set(url('../img/background-product3-mobile.webp'));
     }
 
     .products__header {

@@ -6,6 +6,7 @@
 
 .form__background-container {
     background-image: url("../img/background-form.png");
+    background-image: -webkit-image-set(url("../img/background-form.webp"));
     background-position: -21px -154px;
     background-repeat: no-repeat;
 }
@@ -25,6 +26,7 @@
     padding-top: 17px;
     padding-bottom: 17px;
     padding-left: 17px;
+    padding-right: 17px;
 
     width: 100%;
 
@@ -149,6 +151,7 @@
     min-height: 154px;
 
     resize: none;
+    overflow: auto;
 }
 
 .form__textarea-container {
@@ -156,7 +159,6 @@
 
     width: 100%;
 }
-
 
 @media (max-width: $desktop-res) { 
     .form {
@@ -191,7 +193,11 @@
 
     .form__input-container--text,
     .form__input-container--tel {
-        margin-bottom: 43px;
+        margin-bottom: 35px;
+    }
+
+    .form__input-container--checkbox {
+        width: 47%;
     }
 
     .form__header {

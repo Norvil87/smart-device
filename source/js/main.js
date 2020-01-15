@@ -1,15 +1,20 @@
 'use strict';
-/********************************************/
-  // Управление модальным окном 
-/********************************************/
 
 const KeyCodes = {
   ENTER: 'Enter',
   ESC: 'Escape'
 };
 
+const Resolutions = {
+  MOBILE_MAX: 767
+}
+
 let popupButton = document.querySelector('.header__user-button');
 let modalUnderlay = document.querySelector('.underlay');
+let form = document.querySelector('.form');
+let formName = form.querySelector('#name');
+let formTel = form.querySelector('#tel');
+let formTextarea = form.querySelector('#text');
 let modal = document.querySelector('.modal');
 let modalForm = modal.querySelector('.modal__inputs-container');
 let modalClose = modal.querySelector('.modal__button--close');
@@ -17,7 +22,10 @@ let modalSubmit = modal.querySelector('.modal__button--submit')
 let modalName = modal.querySelector('#modal-name');
 let modalTel = modal.querySelector('#modal-tel');
 let modalTextarea = modal.querySelector('#modal-text');
-let storage = "";
+
+/********************************************/
+  // Управление модальным окном 
+/********************************************/
 
 function onEscPress(evt) {
   if (evt.code === KeyCodes.ESC) {
@@ -92,15 +100,21 @@ function onTelInputFocus(input) {
 function onTelInputSubmit(input) {
   const reg = /^([+]?[0-9\s-\(\)]{3,25})*$/i;
 
-  return input.value.match(reg) && input.value.length === 14
+  return  input.value.match(reg) &&  input.value.length === 14;
 }
 
 modalTel.addEventListener('focus', function() {
   onTelInputFocus(modalTel);
 })
 
+formTel.addEventListener('focus', function() {
+  onTelInputFocus(formTel);
+})
+
  modalForm.addEventListener('submit', function(evt) {
-   if (!onTelInputSubmit(modalTel)) {
+
+   let isTelValid = onTelInputSubmit(modalTel)
+   if (!isTelValid) {
     evt.preventDefault();
     modalTel.setCustomValidity('Введите телефонный номер в формате: +7(xxx)xxxxxxx')
    } 
@@ -110,16 +124,24 @@ modalTel.addEventListener('focus', function() {
   localStorage.setItem("text", modalTextarea.value);
 }) 
 
+form.addEventListener('submit', function(evt) {
+   let isTelValid = onTelInputSubmit(formTel)
+   if (!isTelValid) {
+    evt.preventDefault();
+    formTel.setCustomValidity('Введите телефонный номер в формате: +7(xxx)xxxxxxx')
+   } 
+
+  localStorage.setItem("name", formName.value);
+  localStorage.setItem("tel", formTel.value);
+  localStorage.setItem("text", formTextarea.value);
+}) 
+
 /********************************************/
   // "Аккордион в подвале"
 /********************************************/
 
-const Resolutions = {
-  MOBILE_MAX: 767
-}
-
 let footer = document.querySelector('.footer');
-let footerBlocks = footer.querySelectorAll('.footer__nav, .footer__contacts');
+let footerBlocks = Array.prototype.slice.call(footer.querySelectorAll('.footer__nav, .footer__contacts'));
 
 function toggleVisibility(element) {
   let parent = element.parentNode;
@@ -127,11 +149,15 @@ function toggleVisibility(element) {
 }
 
 function hideBlocks() {
-  footerBlocks.forEach(block => block.classList.add('folded'));
+  footerBlocks.forEach(function(block) {
+    block.classList.add('folded');
+  });
 }
 
 function showBlocks() {
-  footerBlocks.forEach(block => block.classList.remove('folded'));
+  footerBlocks.forEach(function(block) {
+    block.classList.remove('folded');
+  });
 }
 
 function checkResolution() {

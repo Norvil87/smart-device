@@ -1,11 +1,21 @@
 .header {
     background-color: #1A2931;
 
-    background-image: url('../img/header-background@1x.png'), url('../img/constellation.png'), url('../img/printboard@1x.png');
-    background-position: center,right 220px top 130px,right 180px top 250px;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    
-    box-sizing: border-box;
+    background-image: url('../img/header-background@1x.png');
+    background-image: -webkit-image-set(url('../img/header-background@1x.webp'));
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+
+.header__background-container {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    background-image:  url('../img/printboard@1x.png'), url('../img/constellation.png');
+    background-image:  -webkit-image-set(url('../img/printboard@1x.webp')), -webkit-image-set(url('../img/constellation.webp'));
+    background-position: right 180px top 250px, right 220px top 130px;
+    background-repeat:  no-repeat, no-repeat;
+    padding-bottom: 275px;
 }
 
 .header__bottom-container {
@@ -13,12 +23,13 @@
 }
 
 .header__button {
+    display: block;
+
     line-height: 19px;
 
     padding-top: 18px;
     padding-bottom: 18px;
     margin-left: 90px;
-    margin-bottom: 275px;
 
     letter-spacing: 0.12em;
     
@@ -71,7 +82,7 @@
     padding: 0;
     padding-left: 94px;
 
-    width: 683px;
+    width: 750px;
 
     position: relative;
 
@@ -152,8 +163,15 @@
 
 @media (max-width: $desktop-res) {
     .header {
-        background-position: center, right -210px top -30px, right -200px top 120px;
-        background-size: auto, 70%, 60%;
+        background-position: center;
+        background-size: auto;
+    }
+
+    .header__background-container {
+        background-position: right -200px top 120px, right -210px top -30px;
+        background-size: 60%, 70%;
+
+        padding-bottom: 50px;
     }
 
     .header__bottom-container {
@@ -165,8 +183,6 @@
         min-width: 375px;
 
         margin-left: 52px;
-
-        margin-bottom: 50px;
     }
 
     .header__main-heading {
@@ -241,8 +257,13 @@
 
 @media (max-width: $tablet-res) {
     .header {
-        background-position: center, right -300px top -30px, left 20px top 90px;
-        background-size: auto, 150%, 100%;
+        background-position: center;
+        background-size: auto;
+    }
+
+    .header__background-container {
+        background-position: left 20px top 90px, right -300px top -30px;
+        background-size: 100%, 150%;
     }
 
     .header__bottom-container {
