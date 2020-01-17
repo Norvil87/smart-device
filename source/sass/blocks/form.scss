@@ -6,7 +6,7 @@
 
 .form__background-container {
     background-image: url("../img/background-form.png");
-    background-image: -webkit-image-set(url("../img/background-form.webp"));
+    background-image: -webkit-image-set(url("../img/background-form.webp") 1x);
     background-position: -21px -154px;
     background-repeat: no-repeat;
 }

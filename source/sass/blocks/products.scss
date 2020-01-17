@@ -23,17 +23,17 @@
 
 .products__item--1 {
     background-image: url('../img/background-product1-desktop.png');
-    background-image: -webkit-image-set(url('../img/background-product1-desktop.webp'));
+    background-image: -webkit-image-set(url('../img/background-product1-desktop.webp') 1x);
 }
 
 .products__item--2 {
     background-image: url('../img/background-product2-desktop.png');
-    background-image: -webkit-image-set(url('../img/background-product2-desktop.webp'));
+    background-image: -webkit-image-set(url('../img/background-product2-desktop.webp') 1x);
 }
 
 .products__item--3 {
     background-image: url('../img/background-product3-desktop.png');
-    background-image: -webkit-image-set(url('../img/background-product3-desktop.webp'));
+    background-image: -webkit-image-set(url('../img/background-product3-desktop.webp') 1x);
 }
 
 .products__item::after {
@@ -127,17 +127,17 @@
 
     .products__item--1 {
         background-image: url('../img/background-product1-tablet.png');
-        background-image: -webkit-image-set(url('../img/background-product1-tablet.webp'));
+        background-image: -webkit-image-set(url('../img/background-product1-tablet.webp') 1x);
     }
     
     .products__item--2 {
         background-image: url('../img/background-product2-tablet.png');
-        background-image: -webkit-image-set(url('../img/background-product2-tablet.webp'));
+        background-image: -webkit-image-set(url('../img/background-product2-tablet.webp') 1x);
     }
     
     .products__item--3 {
         background-image: url('../img/background-product3-tablet.png');
-        background-image: -webkit-image-set(url('../img/background-product3-tablet.webp'));
+        background-image: -webkit-image-set(url('../img/background-product3-tablet.webp') 1x);
     }
 
     .products__header {
@@ -166,17 +166,17 @@
 
     .products__item--1 {
         background-image: url('../img/background-product1-mobile.png');
-        background-image: -webkit-image-set(url('../img/background-product1-mobile.webp'));
+        background-image: -webkit-image-set(url('../img/background-product1-mobile.webp') 1x);
     }
     
     .products__item--2 {
         background-image: url('../img/background-product2-mobile.png');
-        background-image: -webkit-image-set(url('../img/background-product2-mobile.webp'));
+        background-image: -webkit-image-set(url('../img/background-product2-mobile.webp') 1x);
     }
     
     .products__item--3 {
         background-image: url('../img/background-product3-mobile.png');
-        background-image: -webkit-image-set(url('../img/background-product3-mobile.webp'));
+        background-image: -webkit-image-set(url('../img/background-product3-mobile.webp') 1x);
     }
 
     .products__header {
