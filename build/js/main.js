@@ -7,7 +7,9 @@ const KeyCodes = {
 
 const Resolutions = {
   MOBILE_MAX: 767
-}
+};
+
+const TEL_LENGTH = 14;
 
 let popupButton = document.querySelector('.header__user-button');
 let modalUnderlay = document.querySelector('.underlay');
@@ -15,6 +17,7 @@ let form = document.querySelector('.form');
 let formName = form.querySelector('#name');
 let formTel = form.querySelector('#tel');
 let formTextarea = form.querySelector('#text');
+let formButton = form.querySelector('.form__button');
 let modal = document.querySelector('.modal');
 let modalForm = modal.querySelector('.modal__inputs-container');
 let modalClose = modal.querySelector('.modal__button--close');
@@ -79,28 +82,37 @@ modalUnderlay.addEventListener('click', function(evt) {
 });
 
 /********************************************/
-  // Проверка валидности телефона
+  // Проверка валидности телефона и маска ввода
 /********************************************/
+function onTelInputChange(key, input) {
+    const digitsReg = /^[0-9]$/; 
 
-function onTelInputChange(input) {
-  if (input.value.length === 6 && !input.value.includes(')')) {
-    input.value += ')';
-  }
+    if (!key.match(digitsReg) || input.value.length === 14) {
+      return;
+    };
+
+    input.value += key;
+
+    if (input.value.length === 6) {
+      input.value += ')';
+    }   
 }
 
 function onTelInputFocus(input) {
   const telStartPattern = "+7("
   input.value = telStartPattern;
 
-  input.addEventListener('input', function() {
-    onTelInputChange(input);
-  });
-}
+  function onInputKeypress(evt) {
+    evt.preventDefault();
+    let key = evt.key;
+    onTelInputChange(key, input);
+  }
 
-function onTelInputSubmit(input) {
-  const reg = /^([+]?[0-9\s-\(\)]{3,25})*$/i;
+  input.addEventListener('keypress', onInputKeypress);
 
-  return  input.value.match(reg) &&  input.value.length === 14;
+  input.addEventListener('blur', function() {
+    input.removeEventListener('keypress', onInputKeypress);
+  })
 }
 
 modalTel.addEventListener('focus', function() {
@@ -111,29 +123,33 @@ formTel.addEventListener('focus', function() {
   onTelInputFocus(formTel);
 })
 
- modalForm.addEventListener('submit', function(evt) {
-   let isTelValid = onTelInputSubmit(modalTel)
-   if (!isTelValid) {
-    evt.preventDefault();
-    modalTel.setCustomValidity('Введите телефонный номер в формате: +7(xxx)xxxxxxx')
-   } 
+function validate(input) {
+  if(input.value.length < TEL_LENGTH) {
+    input.setCustomValidity('Телефонный номер должен состоять из 10 цифр')
+  } else {
+    input.setCustomValidity('')
+  }
+}
 
-  localStorage.setItem("name", modalName.value);
-  localStorage.setItem("tel", modalTel.value);
-  localStorage.setItem("text", modalTextarea.value);
-}) 
+formButton.addEventListener('click', function() {
+  validate(formTel);
+});
+
+modalSubmit.addEventListener('click', function() {
+  validate(modalTel);
+});
 
 form.addEventListener('submit', function(evt) {
-   let isTelValid = onTelInputSubmit(formTel)
-   if (!isTelValid) {
-    evt.preventDefault();
-    formTel.setCustomValidity('Введите телефонный номер в формате: +7(xxx)xxxxxxx')
-   } 
-
   localStorage.setItem("name", formName.value);
   localStorage.setItem("tel", formTel.value);
   localStorage.setItem("text", formTextarea.value);
-}) 
+}); 
+
+modalForm.addEventListener('submit', function(evt) {
+  localStorage.setItem("name", modalName.value);
+  localStorage.setItem("tel", modalTel.value);
+  localStorage.setItem("text", modalTextarea.value);
+}); 
 
 /********************************************/
   // "Аккордион в подвале"
