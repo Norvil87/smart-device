@@ -8,22 +8,36 @@ body {
   line-height: 1.344;
 
   box-sizing: border-box;
+
+  height: 100%;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
 }
 
-.body .content {
+body .content {
   flex-grow: 1;
 }
 
-*, *::before, *::after { box-sizing: inherit; }
+body .header {
+  margin-bottom: 110px;
+}
+
+.no-scrolling {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 img {
@@ -38,7 +52,7 @@ p {
 
 .button {
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 5px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -46,7 +60,7 @@ p {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
@@ -58,6 +72,8 @@ p {
 
 .button:hover {
   color: rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
 }
 
 .button:active {
@@ -69,7 +85,6 @@ p {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .hidden {
@@ -93,4 +108,16 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+@media (max-width: $desktop-res) {
+  body .header {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: $tablet-res) {
+  body .header {
+    margin-bottom: 37px;
+  }
 }

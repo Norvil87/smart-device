@@ -1,123 +1,136 @@
 .about {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding-bottom: 50px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-bottom: 50px;
 
-    padding-left: 180px;
+  padding-left: 180px;
 
-     background-image: url('../img/background-2005-desktop.png'); 
-     background-image: -webkit-image-set(url('../img/background-2005-desktop.webp') 1x);  
+  background-image: url("../img/background-2005-desktop@1x.png");
+  background-image: -webkit-image-set(url("../img/background-2005-desktop@1x.webp") 1x);
 
-    background-position: -3% -1%;
-    background-repeat: no-repeat;
+  background-position: -3% -1%;
+  background-repeat: no-repeat;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .about {
+    background-image: url("../img/background-2005-desktop@2x.png");
+    background-image: -webkit-image-set(url("../img/background-2005-desktop@2x.webp") 2x);
+  }
 }
 
 .about__button {
-    color: $skyBlue;
+  color: $skyBlue;
 
-    font-size: 14px;
-    line-height: 16px;
+  font-size: 14px;
+  line-height: 16px;
 
-    border: 1px solid $skyBlue;
+  border: 1px solid $skyBlue;
 
-    min-width: 180px;
+  min-width: 180px;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 70px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 70px;
 }
 
 .about__button:hover {
-    color: rgba(0, 178, 255, 0.6);
-  }
-  
-  .about__button:active {
-    color: rgba(0, 178, 255, 0.3);
-  }
+  color: rgba(0, 178, 255, 0.6);
+}
+
+.about__button:active {
+  color: rgba(0, 178, 255, 0.3);
+}
 
 .about__header {
-    font-family: "Roboto Condensed", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 51px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
 
-    color: #666666;
+  color: #666666;
 
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 .about__text {
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
 
-    line-height: 22px;
+  line-height: 22px;
 }
 
 .about__text-bottom-desktop {
-    margin-bottom: 37px;
+  margin-bottom: 37px;
 }
 
 .about__text-bottom-tablet {
-    display: none;
+  display: none;
 }
 
 @media (max-width: $desktop-res) {
+  .about {
+    padding-left: 200px;
+
+    background-image: url("../img/background-2005-tablet@1x.png");
+    background-position: -3% -1%;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about {
-        padding-left: 200px;
-    
-        background-image: url('../img/background-2005-tablet.png');
-        background-position: -3% -1%;
+      background-image: url("../img/background-2005-tablet@2x.png");
+      background-image: -webkit-image-set(url("../img/background-2005-tablet@2x.webp") 2x);
     }
+  }
 
-    .about__button {
-        margin-bottom: 30px;
-    } 
+  .about__button {
+    margin-bottom: 30px;
+  }
 
-    .about__header {
-        font-size: 32px;
-        line-height: 140.62%;
+  .about__header {
+    font-size: 32px;
+    line-height: 140.62%;
 
-        margin-bottom: 27px;
-    }
+    margin-bottom: 27px;
+  }
 
-    .about__text-bottom-tablet {
-        display: block;
+  .about__text-bottom-tablet {
+    display: block;
 
-        margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
+  }
 
-    .about__text-bottom-desktop {
-        display: none;
-    }
+  .about__text-bottom-desktop {
+    display: none;
+  }
 }
 
 @media (max-width: $tablet-res) {
-    .about {
-        padding-left: 10px;
-    
-        background: none;
-    }
+  .about {
+    padding-left: 10px;
 
-    .about__button {
-        margin-bottom: 10px;
-    } 
+    background: none;
+  }
 
-    .about__header {
-        font-size: 28px;
+  .about__button {
+    margin-bottom: 10px;
+  }
 
-        margin-bottom: 23px;
-    }
+  .about__header {
+    font-size: 28px;
 
-    .about__text:first-of-type {
-        margin-bottom: 40px;
-    }
+    margin-bottom: 23px;
+  }
 
-    .about__text:last-of-type {
-        margin-bottom: 27px;
-    }
+  .about__text:first-of-type {
+    margin-bottom: 40px;
+  }
+
+  .about__text:last-of-type {
+    margin-bottom: 27px;
+  }
 }
-

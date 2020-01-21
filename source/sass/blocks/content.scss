@@ -1,25 +1,25 @@
 .content__features {
-    margin-bottom: 75px;
+  margin-bottom: 75px;
 }
 
 .content__background-container {
-    max-width: 1920px;
-    margin: 0 auto;
+  max-width: 1920px;
+  margin: 0 auto;
 
-    background-image: url('../img/background-arrow.png');
-    background-image: -webkit-image-set(url('../img/background-arrow.webp') 1x);
-    background-position: center -550px;
-    background-repeat: no-repeat;
+  background-image: url("../img/background-arrow.png"),
+    -webkit-image-set(url("../img/background-arrow.webp") 1x);
+  background-position: center -550px;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: $desktop-res) {
-    .content__features {
-        margin-bottom: 28px;
-    }
+  .content__features {
+    margin-bottom: 28px;
+  }
 }
 
 @media (max-width: $tablet-res) {
-    .content__features {
-        margin-bottom: 35px;
-    }
+  .content__features {
+    margin-bottom: 35px;
+  }
 }
