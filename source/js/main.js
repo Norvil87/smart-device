@@ -11,25 +11,36 @@ var Resolutions = {
 
 var TEL_LENGTH = 14;
 
+var body = document.querySelector('body');
+
 var popupButton = document.querySelector('.header__user-button');
-var modalUnderlay = document.querySelector('.underlay');
-var form = document.querySelector('.form');
+
+var form = document.querySelector('.form__inputs-container');
+
 if (form) {
   var formName = form.querySelector('#name');
   var formTel = form.querySelector('#tel');
   var formTextarea = form.querySelector('#text');
-  var formButton = form.querySelector('.form__button');
+  var formSubmit = form.querySelector('.form__button');
 }
 
 var modal = document.querySelector('.modal');
 
 if (modal) {
   var modalForm = modal.querySelector('.modal__inputs-container');
-  var modalClose = modal.querySelector('.modal__button--close');
-  var modalSubmit = modal.querySelector('.modal__button--submit');
-  var modalName = modal.querySelector('#modal-name');
-  var modalTel = modal.querySelector('#modal-tel');
-  var modalTextarea = modal.querySelector('#modal-text');
+  var modalClose = modalForm.querySelector('.modal__button--close');
+  var modalSubmit = modalForm.querySelector('.modal__button--submit');
+  var modalName = modalForm.querySelector('#modal-name');
+  var modalTel = modalForm.querySelector('#modal-tel');
+  var modalTextarea = modalForm.querySelector('#modal-text');
+  var lastElem = modalForm.elements[modalForm.elements.length - 1];
+  var firstElem = modalForm.elements[0];
+}
+
+function getBodyScrollTop() {
+  return self.pageYOffset
+  || (document.documentElement && document.documentElement.ScrollTop)
+  || (document.body && document.body.scrollTop);
 }
 
 function onEscPress(evt) {
@@ -39,48 +50,59 @@ function onEscPress(evt) {
 }
 
 function openPopup() {
-  if (modalUnderlay.classList.contains('hidden')) {
-    modalUnderlay.classList.remove('hidden');
-    if (!document.body.classList.contains('no-scrolling')) {
-      document.body.classList.add('no-scrolling');
-    }
+  body.dataset.scrollY = getBodyScrollTop();
+  body.style.top = -body.dataset.scrollY + 'px';
 
-    document.addEventListener('keydown', onEscPress);
+  modal.classList.add('modal--open');
+  body.classList.add('no-scrolling');
 
-    var telStorage = localStorage.getItem('tel');
-    var nameStorage = localStorage.getItem('name');
+  document.addEventListener('keydown', onEscPress);
 
-    if (nameStorage) {
-      modalName.value = nameStorage;
-      if (telStorage) {
-        modalTel.value = telStorage;
-        modalTextarea.focus();
-      } else {
-        modalTel.focus();
-      }
+  var telStorage = localStorage.getItem('tel');
+  var nameStorage = localStorage.getItem('name');
+
+  if (nameStorage) {
+    modalName.value = nameStorage;
+    if (telStorage) {
+      modalTel.value = telStorage;
+      modalTextarea.focus();
     } else {
-      modalName.focus();
+      modalTel.focus();
     }
+  } else {
+    modalName.focus();
   }
 }
 
 function closePopup() {
-  if (!modalUnderlay.classList.contains('hidden')) {
-    modalUnderlay.classList.add('hidden');
-    if (document.body.classList.contains('no-scrolling')) {
-      document.body.classList.remove('no-scrolling');
-    }
+  modal.classList.remove('modal--open');
+  body.classList.remove('no-scrolling');
 
-    document.removeEventListener('keydown', onEscPress);
-  }
+  window.scrollTo(0, body.dataset.scrollY);
+
+  document.removeEventListener('keydown', onEscPress);
 }
+
+lastElem.onkeydown = function (evt) {
+  if (evt.key === 'Tab' && !evt.shiftKey) {
+    firstElem.focus();
+    return false;
+  }
+};
+
+firstElem.onkeydown = function (evt) {
+  if (evt.key === 'Tab' && evt.shiftKey) {
+    lastElem.focus();
+    return false;
+  }
+};
 
 function onPopupButtonClick() {
   openPopup();
 }
 
 function onModalUnderlayClick(evt) {
-  if (evt.target === modalClose || evt.target === modalUnderlay) {
+  if (evt.target === modalClose || evt.target === modal) {
     closePopup();
   }
 }
@@ -89,8 +111,8 @@ if (popupButton) {
   popupButton.addEventListener('click', onPopupButtonClick);
 }
 
-if (modalUnderlay) {
-  modalUnderlay.addEventListener('click', function (evt) {
+if (modal) {
+  modal.addEventListener('click', function (evt) {
     onModalUnderlayClick(evt);
   });
 }
@@ -146,8 +168,8 @@ function validate(input) {
   }
 }
 
-if (formButton) {
-  formButton.addEventListener('click', function () {
+if (formSubmit) {
+  formSubmit.addEventListener('click', function () {
     validate(formTel);
   });
 }
@@ -179,10 +201,16 @@ if (footerTop) {
   var footerBlocks = Array.prototype.slice.call(footerTop.querySelectorAll('.footer__nav, .footer__contacts'));
 }
 
-function toggleVisibility() {
-  footerBlocks.forEach(function (block) {
+function toggleVisibility(block) {
+  var foldedBlocks = document.querySelectorAll('.folded');
+
+  if (foldedBlocks.length === 1) {
+    footerBlocks.forEach(function (item) {
+      item.classList.toggle('folded');
+    });
+  } else {
     block.classList.toggle('folded');
-  });
+  }
 }
 
 function checkResolution() {
@@ -201,7 +229,7 @@ if (footerTop) {
       return;
     }
 
-    toggleVisibility();
+    toggleVisibility(target.parentNode);
   });
 }
 

@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
 
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   flex-direction: column;
 }
 
-body .content {
+.wrapper {
   flex-grow: 1;
 }
 
@@ -26,7 +27,8 @@ body .header {
 }
 
 .no-scrolling {
-  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
 }
 
 *,

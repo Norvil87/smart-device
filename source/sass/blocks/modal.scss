@@ -1,38 +1,35 @@
-.modal {
+.modal__content {
   max-width: 490px;
   height: 605px;
 
   background-color: $skyBlue;
 
   padding-top: 33px;
-  padding-bottom: 36px;
+  padding-bottom: 3px;
   padding-right: 40px;
   padding-left: 40px;
 
-  position: fixed;
-  top: calc(50% - 300px);
-  left: calc(50% - 245px);
+  position: absolute;
 
-  z-index: 1000;
-
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
-.underlay {
+.modal {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
 
   background-color: rgba(26, 41, 49, 0.6);
 
-  width: 100%;
-  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 490px) {
-  .modal {
-    left: 0;
-  }
+.modal--open {
+  display: flex;
 }
 
 .modal input,
@@ -102,6 +99,10 @@
   opacity: 1;
 }
 
+.modal input[type="checkbox"]:focus + label {
+  opacity: 0.6;
+}
+
 .modal__button--close:active:focus {
   outline: none;
 }
@@ -130,9 +131,9 @@
   cursor: pointer;
 }
 
-.modal input[type="checkbox"] {
+/* .modal input[type="checkbox"] {
   display: none;
-}
+} */
 
 .modal input[type="checkbox"] + label::before {
   content: "";
