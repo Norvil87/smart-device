@@ -8,7 +8,7 @@
   margin: 0 auto;
 }
 
-.features__title {
+.features__item h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -22,7 +22,7 @@
   padding: 0;
 }
 
-.features__text {
+.features__item p {
   line-height: 22px;
 
   color: #666666;
@@ -64,8 +64,8 @@
   background-color: $skyBlue;
 }
 
-.features__item:hover .features__text,
-.features__item:hover .features__title {
+.features__item:hover p,
+.features__item:hover h3 {
   color: #ffffff;
 }
 
@@ -100,7 +100,7 @@
     width: 95.5%;
   }
 
-  .features__title {
+  .features__item h3 {
     margin-bottom: 5px;
   }
 }
@@ -110,12 +110,12 @@
     width: 98%;
   }
 
-  .features__title {
+  .features__item h3 {
     line-height: 140.62%;
     font-size: 20px;
   }
 
-  .features__text {
+  .features__item p {
     padding-right: 0;
   }
 
