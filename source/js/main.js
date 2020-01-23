@@ -83,14 +83,16 @@ function closePopup() {
   document.removeEventListener('keydown', onEscPress);
 }
 
-lastElem.onkeypress = function (evt) {
+lastElem.onkeydown = function (evt) {
   if (evt.key === 'Tab' && !evt.shiftKey) {
-    lastElem.focus();
+    evt.preventDefault();
+    firstElem.focus();
   }
 };
 
 firstElem.onkeydown = function (evt) {
   if (evt.key === 'Tab' && evt.shiftKey) {
+    evt.preventDefault();
     lastElem.focus();
   }
 };
