@@ -15,6 +15,8 @@ var body = document.querySelector('body');
 
 var popupButton = document.querySelector('.header__user-button');
 
+var modalFocus = window.focusTrap('.modal');
+
 var form = document.querySelector('.form__inputs-container');
 
 if (form) {
@@ -33,8 +35,6 @@ if (modal) {
   var modalName = modalForm.querySelector('#modal-name');
   var modalTel = modalForm.querySelector('#modal-tel');
   var modalTextarea = modalForm.querySelector('#modal-text');
-  var lastElem = modalForm.elements[modalForm.elements.length - 1];
-  var firstElem = modalForm.elements[0];
 }
 
 function getBodyScrollTop() {
@@ -54,6 +54,7 @@ function openPopup() {
   body.style.top = -body.dataset.scrollY + 'px';
 
   modal.classList.add('modal--open');
+  modalFocus.activate();
   body.classList.add('no-scrolling');
 
   document.addEventListener('keydown', onEscPress);
@@ -76,26 +77,13 @@ function openPopup() {
 
 function closePopup() {
   modal.classList.remove('modal--open');
+  modalFocus.deactivate();
   body.classList.remove('no-scrolling');
 
   window.scrollTo(0, body.dataset.scrollY);
 
   document.removeEventListener('keydown', onEscPress);
 }
-
-lastElem.onkeydown = function (evt) {
-  if (evt.key === 'Tab' && !evt.shiftKey) {
-    evt.preventDefault();
-    firstElem.focus();
-  }
-};
-
-firstElem.onkeydown = function (evt) {
-  if (evt.key === 'Tab' && evt.shiftKey) {
-    evt.preventDefault();
-    lastElem.focus();
-  }
-};
 
 function onPopupButtonClick() {
   openPopup();
