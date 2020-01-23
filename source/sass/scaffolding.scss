@@ -9,17 +9,19 @@ body {
 
   box-sizing: border-box;
 
-  height: 100%;
   width: 100%;
 }
 
 body {
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
 }
 
 .wrapper {
   flex-grow: 1;
+  flex-shrink: 0;
 }
 
 body .header {

@@ -1,10 +1,13 @@
 .header {
   background-color: #1a2931;
 
-  background-image: url("../img/header-background@1x.png"),
-    -webkit-image-set(url("../img/header-background@1x.webp") 1x);
+  background-image: url("../img/header-background@1x.png");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.webp .header {
+  background-image: url("../img/header-background@1x.webp");
 }
 
 .header h1 {
@@ -33,20 +36,27 @@
 
   background-image:  url("../img/printboard@1x.png"),
     url("../img/constellation@1x.png");
-  background-image: -webkit-image-set(url("../img/printboard@1x.webp") 1x),
-    -webkit-image-set(url("../img/constellation@1x.webp") 1x);
   background-position: right 180px top 250px, right 220px top 130px;
   background-repeat: no-repeat, no-repeat;
 
   padding-bottom: 122px;
 }
 
+.webp .header__background-container {
+  background-image:  url("../img/printboard@1x.webp"),
+    url("../img/constellation@1x.webp");
+}
+
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header__background-container {
     background-image:  url("../img/printboard@2x.png"),
       url("../img/constellation@2x.png");
-    background-image:  -webkit-image-set(url("../img/printboard@2x.webp") 2x),
-      -webkit-image-set(url("../img/constellation@2x.webp") 2x);
+    background-size: 705px 515px, 671px 794px;
+  }
+
+  .webp .header__background-container {
+    background-image:  url("../img/printboard@2x.webp"),
+      url("../img/constellation@2x.webp");
   }
 }
 

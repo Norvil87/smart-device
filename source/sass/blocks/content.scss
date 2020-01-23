@@ -7,9 +7,12 @@
   margin: 0 auto;
 
   background-image: url("../img/background-arrow.png");
-  background-image: webkit-image-set(url("../img/background-arrow.webp") 1x);
   background-position: center -550px;
   background-repeat: no-repeat;
+}
+
+.webp .content__background-container {
+  background-image: url("../img/background-arrow.webp");
 }
 
 @media (max-width: $desktop-res) {

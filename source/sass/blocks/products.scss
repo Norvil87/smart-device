@@ -14,6 +14,8 @@
   margin-right: 2.4%;
   margin-bottom: 27px;
 
+  background-size: contain;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
 
   &:nth-child(3n) {
@@ -23,33 +25,51 @@
 
 .products__item--production {
   background-image: url("../img/background-product1-desktop@1x.png");
-  background-image: -webkit-image-set(url("../img/background-product1-desktop@1x.webp") 1x);
+}
+
+.webp .products__item--production {
+  background-image: url("../img/background-product1-desktop@1x.webp");
 }
 
 .products__item--assembling {
   background-image: url("../img/background-product2-desktop@1x.png");
-  background-image: -webkit-image-set(url("../img/background-product2-desktop@1x.webp") 1x);
+}
+
+.webp .products__item--assembling {
+  background-image: url("../img/background-product2-desktop@1x.webp");
 }
 
 .products__item--components {
   background-image: url("../img/background-product3-desktop@1x.png");
-  background-image: -webkit-image-set(url("../img/background-product3-desktop@1x.webp") 1x);
+}
+
+.webp .products__item--components {
+  background-image: url("../img/background-product3-desktop@1x.webp");
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .products__item--production {
     background-image: url("../img/background-product1-desktop@2x.png");
-    background-image: -webkit-image-set(url("../img/background-product1-desktop@2x.webp") 2x);
+  }
+
+  .webp .products__item--production {
+    background-image: url("../img/background-product1-desktop@2x.webp");
   }
 
   .products__item--assembling {
     background-image: url("../img/background-product2-desktop@2x.png");
-    background-image: -webkit-image-set(url("../img/background-product2-desktop@2x.webp") 2x);
+  }
+
+  .webp .products__item--assembling {
+    background-image: url("../img/background-product2-desktop@2x.webp");
   }
 
   .products__item--components {
     background-image: url("../img/background-product3-desktop@2x.png");
-    background-image: -webkit-image-set(url("../img/background-product3-desktop@2x.webp") 2x);
+  }
+
+  .webp .products__item--components {
+    background-image: url("../img/background-product3-desktop@2x.webp");
   }
 }
 
@@ -144,33 +164,51 @@
 
   .products__item--production {
     background-image: url("../img/background-product1-tablet@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product1-tablet@1x.webp") 1x);
+  }
+
+  .webp .products__item--production {
+    background-image: url("../img/background-product1-tablet@1x.webp");
   }
 
   .products__item--assembling {
     background-image: url("../img/background-product2-tablet@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product2-tablet@1x.webp") 1x);
+  }
+
+  .webp .products__item--assembling {
+    background-image: url("../img/background-product2-tablet@1x.webp");
   }
 
   .products__item--components {
     background-image: url("../img/background-product3-tablet@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product3-tablet@1x.webp") 1x);
+  }
+
+  .webp .products__item--components {
+    background-image: url("../img/background-product3-tablet@1x.webp");
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .products__item--production {
       background-image: url("../img/background-product1-tablet@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product1-tablet@2x.webp") 2x);
+    }
+
+    .webp .products__item--production {
+      background-image: url("../img/background-product1-tablet@2x.webp");
     }
 
     .products__item--assembling {
       background-image: url("../img/background-product2-tablet@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product2-tablet@2x.webp") 2x);
+    }
+
+    .webp .products__item--assembling {
+      background-image: url("../img/background-product2-tablet@2x.webp");
     }
 
     .products__item--components {
       background-image: url("../img/background-product3-tablet@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product3-tablet@2x.webp") 2x);
+    }
+
+    .webp .products__item--components {
+      background-image: url("../img/background-product3-tablet@2x.webp");
     }
   }
 
@@ -200,33 +238,51 @@
 
   .products__item--production {
     background-image: url("../img/background-product1-mobile@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product1-mobile@1x.webp") 1x);
+  }
+
+  .webp .products__item--production {
+    background-image: url("../img/background-product1-mobile@1x.webp");
   }
 
   .products__item--assembling {
     background-image: url("../img/background-product2-mobile@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product2-mobile@1x.webp") 1x);
+  }
+
+  .webp .products__item--assembling {
+    background-image: url("../img/background-product2-mobile@1x.webp");
   }
 
   .products__item--components {
     background-image: url("../img/background-product3-mobile@1x.png");
-    background-image: -webkit-image-set(url("../img/background-product3-mobile@1x.webp") 1x);
+  }
+
+  .webp .products__item--components {
+    background-image: url("../img/background-product3-mobile@1x.webp");
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .products__item--production {
       background-image: url("../img/background-product1-mobile@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product1-mobile@2x.webp") 2x);
+    }
+
+    .webp .products__item--production {
+      background-image: url("../img/background-product1-mobile@2x.webp");
     }
 
     .products__item--assembling {
       background-image: url("../img/background-product2-mobile@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product2-mobile@2x.webp") 2x);
+    }
+
+    .webp .products__item--assembling {
+      background-image: url("../img/background-product2-mobile@2x.webp");
     }
 
     .products__item--components {
       background-image: url("../img/background-product3-mobile@2x.png");
-      background-image: -webkit-image-set(url("../img/background-product3-mobile@2x.webp") 2x);
+    }
+
+    .webp .products__item--components {
+      background-image: url("../img/background-product3-tablet@2x.webp");
     }
   }
 

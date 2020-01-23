@@ -6,16 +6,23 @@
   padding-left: 180px;
 
   background-image: url("../img/background-2005-desktop@1x.png");
-  background-image: -webkit-image-set(url("../img/background-2005-desktop@1x.webp") 1x);
 
   background-position: -3% -1%;
   background-repeat: no-repeat;
 }
 
+.webp .about {
+  background-image: url("../img/background-2005-desktop@1x.webp");
+}
+
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .about {
     background-image: url("../img/background-2005-desktop@2x.png");
-    background-image: -webkit-image-set(url("../img/background-2005-desktop@2x.webp") 2x);
+    background-size: 220px 317px;
+  }
+
+  .webp .about {
+    background-image: url("../img/background-2005-desktop@2x.webp");
   }
 }
 
@@ -77,13 +84,20 @@
     padding-left: 200px;
 
     background-image: url("../img/background-2005-tablet@1x.png");
-    background-position: -3% -1%;
+  }
+
+  .webp .about {
+    background-image: url("../img/background-2005-tablet@1x.webp");
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about {
       background-image: url("../img/background-2005-tablet@2x.png");
-      background-image: -webkit-image-set(url("../img/background-2005-tablet@2x.webp") 2x);
+      background-size: 244px 362px;
+    }
+
+    .webp .about {
+      background-image: url("../img/background-2005-tablet@2x.webp");
     }
   }
 
