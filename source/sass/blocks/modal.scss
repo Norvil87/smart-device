@@ -138,10 +138,6 @@
   cursor: pointer;
 }
 
-/* .modal input[type="checkbox"] {
-  display: none;
-} */
-
 .modal input[type="checkbox"] + label::before {
   content: "";
 

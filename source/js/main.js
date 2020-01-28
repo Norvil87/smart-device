@@ -208,9 +208,8 @@ function checkResolution() {
 
 if (footerTop) {
   footerTop.addEventListener('click', function (evt) {
-    var target = evt.target.closest('h3');
-
-    if (!target) {
+    var target = evt.target;
+    if (target.tagName !== 'H3') {
       return;
     }
 
