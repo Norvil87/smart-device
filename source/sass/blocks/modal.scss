@@ -55,6 +55,17 @@
   color: #ffffff;
 }
 
+.modal__input-container {
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.modal__input-container--name,
+.modal__input-container--tel {
+  height: 52px;
+}
+
 .modal__input-container input::placeholder,
 .modal__textarea-container textarea::placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -168,12 +179,6 @@
   overflow: auto;
 }
 
-.modal__input-container {
-  width: 100%;
-
-  margin-bottom: 30px;
-}
-
 .modal h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -203,5 +208,5 @@
 
   width: 100%;
 
-  min-height: 104px;
+  height: 104px;
 }
