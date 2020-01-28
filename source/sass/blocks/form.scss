@@ -9,7 +9,7 @@
   margin: 0 auto;
 
   background-image: url("../img/background-form@1x.png");
-  background-position: 50px -150px;
+  background-position: 35px -150px;
   background-repeat: no-repeat;
 }
 
@@ -28,6 +28,13 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .form__background-container {
+    background-size: 120%, 120%;
+    background-position: 35px center;
+  }
+}
+
 .form button {
   min-width: 270px;
   padding-bottom: 14px;
@@ -35,8 +42,8 @@
   margin-bottom: 109px;
 }
 
-.form input,
-.form textarea {
+.form__input-container input,
+.form__textarea-container textarea {
   background-color: #19baff;
   border: none;
 
@@ -47,6 +54,15 @@
 
   width: 100%;
 
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form__input-container input::placeholder,
+.form__textarea-container textarea::placeholder {
+  font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -62,13 +78,6 @@
 .form textarea:focus,
 .form input[type="checkbox"]:active + label {
   opacity: 1;
-}
-
-.form input::placeholder,
-.form textarea::placeholder {
-  font-size: 16px;
-  line-height: 22px;
-  color: #ffffff;
 }
 
 .form label {
@@ -115,8 +124,9 @@
 }
 
 .form__centrifier {
-  max-width: 1170px;
+  max-width: 1190px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .form__content-container {
@@ -290,6 +300,12 @@
     width: 100%;
 
     margin-bottom: 33px;
+  }
+
+  .form__input-container--text input,
+  .form__input-container--tel input {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .form p {

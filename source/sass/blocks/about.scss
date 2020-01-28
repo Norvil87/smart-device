@@ -130,6 +130,20 @@
     background: none;
   }
 
+  .webp .about {
+    background: none;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about {
+      background: none;
+    }
+
+    .webp .about {
+      background: none;
+    }
+  }
+
   .about__button {
     margin-bottom: 10px;
   }

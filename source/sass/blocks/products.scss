@@ -212,6 +212,10 @@
     }
   }
 
+  .products__item--components .products__link {
+    padding-top: 50px;
+  }
+
   .products h2 {
     font-size: 32px;
     line-height: 140.62%;
@@ -284,6 +288,10 @@
     .webp .products__item--components {
       background-image: url("../img/background-product3-tablet@2x.webp");
     }
+  }
+
+  .products__item--components .products__link {
+    padding-top: 30px;
   }
 
   .products h2 {

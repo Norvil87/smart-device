@@ -2,7 +2,8 @@
 
 var KeyCodes = {
   ENTER: 'Enter',
-  ESC: 'Escape'
+  ESC: 'Esc',
+  ESC_IE: 'Escape'
 };
 
 var Resolutions = {
@@ -44,7 +45,7 @@ function getBodyScrollTop() {
 }
 
 function onEscPress(evt) {
-  if (evt.code === KeyCodes.ESC) {
+  if (evt.key === KeyCodes.ESC || evt.key === KeyCodes.ESC_IE) {
     closePopup();
   }
 }
