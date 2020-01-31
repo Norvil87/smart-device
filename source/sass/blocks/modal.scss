@@ -121,6 +121,8 @@
 .modal textarea:focus,
 .modal input[type="checkbox"]:active + label {
   opacity: 1;
+
+  outline: none;
 }
 
 .modal input[type="checkbox"]:focus + label {
